@@ -21,7 +21,144 @@
       --shadow: 0 18px 50px rgba(116,72,75,0.08);
       --shadow-hover: 0 24px 70px rgba(116,72,75,0.12);
     }
+.case-study-section {
+  padding: 88px 0;
+  border-top: 1px solid rgba(116,72,75,0.08);
+}
 
+.case-study-grid {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.case-study-label {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  color: rgba(116,72,75,0.62);
+  margin-bottom: 14px;
+}
+
+.case-study-title {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+}
+
+.case-study-subtitle {
+  margin-top: 14px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: rgba(55,55,55,0.48);
+}
+
+.case-study-copy {
+  max-width: 56ch;
+}
+
+.case-study-copy p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.85;
+  color: rgba(55,55,55,0.80);
+  margin: 0 0 14px;
+}
+
+.case-study-copy strong {
+  color: var(--primary);
+}
+
+.case-study-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 26px 0 30px;
+}
+
+.case-study-meta-card {
+  background: rgba(255,255,255,0.58);
+  border: 1px solid rgba(116,72,75,0.08);
+  border-radius: 22px;
+  padding: 16px;
+}
+
+.case-study-meta-card .meta-kicker {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.64rem;
+  color: rgba(55,55,55,0.42);
+  margin-bottom: 8px;
+}
+
+.case-study-meta-card .meta-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--primary);
+}
+
+.case-study-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.case-study-images img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 26px;
+  display: block;
+}
+
+.case-study-images.single {
+  grid-template-columns: 1fr;
+}
+
+.case-study-images.single img {
+  height: 560px;
+}
+
+.case-study-note {
+  margin-top: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: rgba(55,55,55,0.58);
+}
+
+.back-to-projects {
+  display: inline-flex;
+  margin-top: 24px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  color: var(--primary);
+  opacity: 0.82;
+}
+
+@media (max-width: 900px) {
+  .case-study-grid,
+  .case-study-meta,
+  .case-study-images {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-images img,
+  .case-study-images.single img {
+    height: auto;
+  }
+}
     * {
       box-sizing: border-box;
     }
@@ -253,13 +390,13 @@
       padding: 74px 0;
     }
 
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 24px;
-      margin-bottom: 30px;
-    }
+.section-head {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 24px;
+}
 
     .section-kicker {
       font-family: 'Inter', sans-serif;
@@ -278,13 +415,14 @@
       letter-spacing: -0.02em;
     }
 
-    .section-note {
-      max-width: 420px;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.9;
-      color: rgba(55,55,55,0.72);
-      font-size: 0.98rem;
-    }
+ .section-note {
+  max-width: 320px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.75;
+  color: rgba(55,55,55,0.64);
+  font-size: 0.88rem;
+  padding-top: 8px;
+}
 
     .about-wrap {
       display: grid;
@@ -309,34 +447,34 @@
       color: rgba(55,55,55,0.82);
     }
 
-    .project-list {
-      display: grid;
-      gap: 26px;
-    }
+   .project-list {
+  display: grid;
+  gap: 20px;
+}
 
-    .project-card {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 26px;
-      background: rgba(255,255,255,0.58);
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: transform 0.28s ease, box-shadow 0.28s ease;
-    }
+.project-card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0;
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(116,72,75,0.08);
+  border-radius: 30px;
+  box-shadow: 0 14px 40px rgba(116,72,75,0.06);
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
 
     .project-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-hover);
     }
 
-    .project-image {
-      min-height: 380px;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(225,203,213,0.88), rgba(244,238,241,0.95), rgba(226,206,202,0.9));
-    }
+.project-image {
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(225,203,213,0.40), rgba(244,238,241,0.75), rgba(226,206,202,0.55));
+}
 
     .project-image img {
       width: 100%;
@@ -371,55 +509,58 @@
       justify-content: center;
     }
 
-    .meta {
-      font-family: 'Inter', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.75rem;
-      color: rgba(55,55,55,0.52);
-      margin-bottom: 18px;
-    }
+.meta {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  color: rgba(55,55,55,0.44);
+  margin-bottom: 14px;
+}
 
-    .project-title {
-      font-size: clamp(2rem, 3vw, 3rem);
-      margin: 0 0 8px;
-      color: var(--primary);
-      line-height: 1;
-    }
+.project-title {
+  font-size: clamp(2.1rem, 3vw, 3.1rem);
+  margin: 0 0 10px;
+  color: var(--primary);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
 
-    .project-sub {
-      font-family: 'Inter', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.78rem;
-      color: rgba(55,55,55,0.60);
-      margin-bottom: 22px;
-    }
+ .project-sub {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.70rem;
+  color: rgba(55,55,55,0.50);
+  margin-bottom: 20px;
+}
 
-    .project-body p {
-      margin: 0 0 14px;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.85;
-      color: rgba(55,55,55,0.82);
-      font-size: 0.98rem;
-    }
+.project-body p {
+  margin: 0 0 12px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.75;
+  color: rgba(55,55,55,0.78);
+  font-size: 0.90rem;
+  max-width: 34ch;
+}
 
     .project-body strong {
       color: var(--primary);
     }
-
-    .hover-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 16px;
-      font-family: 'Inter', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.76rem;
-      color: var(--primary);
-      width: fit-content;
-    }
+    
+.hover-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  color: var(--primary);
+  width: fit-content;
+  opacity: 0.85;
+}
 
     .hover-link span {
       display: inline-block;
@@ -490,9 +631,11 @@
         display: none;
       }
 
-      .project-content {
-        padding: 26px;
-      }
+  .project-content {
+  padding: 26px 24px 28px;
+  border-left: none;
+  border-top: 1px solid rgba(116,72,75,0.05);
+}
 
       .project-image {
         min-height: 280px;
@@ -628,7 +771,9 @@
                 <p><strong>Concept:</strong> A spatial system translating mycelial networks into a non-linear healing environment — encouraging exploration, pause, and interconnected movement.</p>
                 <p><strong>Impact:</strong> Reframes public space as a living system of care, nurturing emotional resilience and community connection.</p>
               </div>
-              <a class="hover-link" href="#"><span>Explore case study →</span></a>
+             <a class="hover-link" href="#case-study-mycelium"><span>Explore case study →</span></a>
+<a class="hover-link" href="#case-study-filipiniana"><span>Explore case study →</span></a>
+<a class="hover-link" href="#case-study-unextinguished"><span>Explore case study →</span></a>
             </div>
           </article>
 
@@ -674,6 +819,163 @@
         </div>
       </div>
     </section>
+
+    <section id="case-study-mycelium" class="case-study-section">
+  <div class="container">
+    <div class="case-study-grid">
+      <div>
+        <div class="case-study-label">Case Study 01</div>
+        <h2 class="case-study-title">Mycelium Mind</h2>
+        <div class="case-study-subtitle">Healing Garden System</div>
+      </div>
+
+      <div class="case-study-copy">
+        <p><strong>Overview:</strong> Mycelium Mind is a biomimetic healing garden concept inspired by the intelligence of mycelial networks. The project translates interconnected natural systems into a spatial experience centered on pause, emotional regulation, and gentle movement.</p>
+
+        <div class="case-study-meta">
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Timeline</div>
+            <div class="meta-text">2026</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Role</div>
+            <div class="meta-text">Research, concept development, spatial design</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Focus</div>
+            <div class="meta-text">Wellbeing, community, biomimicry</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Tools</div>
+            <div class="meta-text">Rhino, rendering, visual storytelling</div>
+          </div>
+        </div>
+
+        <p><strong>Problem:</strong> Urban environments often prioritize efficiency over emotional wellbeing, leaving few public spaces that actively invite reflection, calm, and restorative interaction.</p>
+
+        <p><strong>Concept:</strong> I looked to mycelium as a model for connection, resilience, and quiet support. Rather than designing a linear park experience, I created a system of circular and branching pathways that encourage non-linear movement, discovery, and moments of pause.</p>
+
+        <p><strong>Process:</strong> The project developed through site planning, biomimetic form exploration, and pavilion studies. Petal-like structures became the primary spatial language, offering zones for meditation, reflection, swings, resting, and social gathering. The goal was to create a landscape that feels emotionally protective while still remaining open and communal.</p>
+
+        <p><strong>Outcome:</strong> The final proposal frames the garden as a living system of care — one that supports emotional resilience through natural metaphors, soft form language, and experiential storytelling.</p>
+
+        <a class="back-to-projects" href="#projects">Back to selected work →</a>
+      </div>
+    </div>
+
+    <div class="case-study-images single">
+      <img src="mycelium.jpg" alt="Mycelium Mind healing garden render">
+    </div>
+    <div class="case-study-note">
+      Top-down spatial render showing the non-linear healing garden layout and program zones for rest, meditation, reflection, play, and gathering.
+    </div>
+  </div>
+</section>
+
+    <section id="case-study-filipiniana" class="case-study-section">
+  <div class="container">
+    <div class="case-study-grid">
+      <div>
+        <div class="case-study-label">Case Study 02</div>
+        <h2 class="case-study-title">Land Meets the Sun</h2>
+        <div class="case-study-subtitle">Contemporary Filipiniana Gown</div>
+      </div>
+
+      <div class="case-study-copy">
+        <p><strong>Overview:</strong> Land Meets the Sun is a contemporary Filipiniana concept that reinterprets heritage through material storytelling, woven structure, and symbolic color. The project explores how tradition can evolve without losing its cultural grounding.</p>
+
+        <div class="case-study-meta">
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Timeline</div>
+            <div class="meta-text">2026</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Role</div>
+            <div class="meta-text">Concept, illustration, material direction</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Focus</div>
+            <div class="meta-text">Culture, craft, storytelling</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Themes</div>
+            <div class="meta-text">Identity, sunlight, land, heritage</div>
+          </div>
+        </div>
+
+        <p><strong>Problem:</strong> Traditional garments are often preserved visually, but are not always reimagined in ways that reflect contemporary identity, emotional symbolism, or evolving material language.</p>
+
+        <p><strong>Concept:</strong> I translated the idea of land meeting the sun into silhouette, embroidery, and woven sleeve structure. The gown combines softness and ceremony: floral detailing reflects life and growth, while the green woven sleeves and central panel symbolize land, continuity, and rootedness.</p>
+
+        <p><strong>Process:</strong> The design was developed through sketching, symbolic mapping, and refinement of key visual elements. I focused on how the Filipiniana silhouette could remain recognizable while introducing a more narrative-driven, poetic direction through color, texture, and proportion.</p>
+
+        <p><strong>Outcome:</strong> The final concept creates a bridge between cultural preservation and modern expression. It presents the Filipiniana as both a garment and a storytelling object — honoring heritage while inviting reinterpretation.</p>
+
+        <a class="back-to-projects" href="#projects">Back to selected work →</a>
+      </div>
+    </div>
+
+    <div class="case-study-images">
+      <img src="land-sun.jpg" alt="Land Meets the Sun Filipiniana gown full view">
+      <img src="sleeve-detail.jpg" alt="Woven sleeve detail from Filipiniana gown">
+    </div>
+    <div class="case-study-note">
+      Full gown visualization paired with woven sleeve detail to show the project’s balance of silhouette, symbolism, and craft.
+    </div>
+  </div>
+</section>
+
+    <section id="case-study-unextinguished" class="case-study-section">
+  <div class="container">
+    <div class="case-study-grid">
+      <div>
+        <div class="case-study-label">Case Study 03</div>
+        <h2 class="case-study-title">Unextinguished</h2>
+        <div class="case-study-subtitle">Light Exhibit for Persian Women</div>
+      </div>
+
+      <div class="case-study-copy">
+        <p><strong>Overview:</strong> Unextinguished is an immersive light exhibit concept honoring the resilience, visibility, and creative voices of Persian women and artists. The project uses atmosphere, draped material, and spatial composition to create a reflective emotional environment.</p>
+
+        <div class="case-study-meta">
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Timeline</div>
+            <div class="meta-text">2026</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Role</div>
+            <div class="meta-text">Exhibit concept, render direction, narrative framing</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Focus</div>
+            <div class="meta-text">Advocacy, atmosphere, storytelling</div>
+          </div>
+          <div class="case-study-meta-card">
+            <div class="meta-kicker">Themes</div>
+            <div class="meta-text">Voice, remembrance, presence, resilience</div>
+          </div>
+        </div>
+
+        <p><strong>Problem:</strong> Stories of resilience and resistance often lack physical spaces where they can be encountered collectively, emotionally, and with care.</p>
+
+        <p><strong>Concept:</strong> I approached the exhibit as an embodied spatial narrative. Rather than relying on direct explanation, the installation uses light, translucency, and softness to evoke absence, presence, and quiet strength. Draped materials create a layered threshold experience, while the central structure acts as a symbolic focal point.</p>
+
+        <p><strong>Process:</strong> The project evolved through exhibition references, mood-building, and atmospheric rendering. I explored how softness and light could hold political and emotional weight without becoming visually aggressive. The composition was shaped to feel intimate, reflective, and sacred.</p>
+
+        <p><strong>Outcome:</strong> The final proposal transforms advocacy into an immersive encounter. It creates space not only for viewing, but for feeling — allowing the audience to move through memory, attention, and collective reflection.</p>
+
+        <a class="back-to-projects" href="#projects">Back to selected work →</a>
+      </div>
+    </div>
+
+    <div class="case-study-images single">
+      <img src="unextinguished.jpg" alt="Unextinguished light exhibit render">
+    </div>
+    <div class="case-study-note">
+      Atmospheric render of the exhibit environment showing layered translucency, central object focus, and quiet immersive lighting.
+    </div>
+  </div>
+</section>
 
     <section id="palette">
       <div class="container">
